@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Turing: Pioneer of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+        .container {
+            max-width: 900px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <div id="presentation-container" class="bg-white rounded-xl shadow-2xl p-8 md:p-12 w-full container">
+
+        <!-- Slide 1: Title Slide -->
+        <div id="slide-1" class="slide active text-center flex flex-col items-center justify-center min-h-[500px]">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight">Alan Turing: The Father of Modern AI</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8">His Life, Work, and Enduring Legacy</p>
+            <div class="w-2/3 md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+                <img src="https://placehold.co/800x600/E5E7EB/4B5563?text=Image+of+Alan+Turing" alt="Alan Turing portrait" class="w-full h-auto object-cover">
+            </div>
+            <button onclick="nextSlide()" class="mt-12 bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                Start Presentation
+            </button>
+        </div>
+
+        <!-- Slide 2: Early Life and Contributions -->
+        <div id="slide-2" class="slide min-h-[500px]">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Early Life and World War II</h2>
+            <div class="md:flex md:space-x-8">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">Born in London in 1912, Alan Turing was a brilliant mathematician who studied at the University of Cambridge and Princeton. He's most famous for his theoretical work that prefigured modern computing.</p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">His most important early contribution was the concept of the <strong class="text-blue-600">Turing Machine</strong>, a theoretical model of computation that provided the blueprint for all general-purpose computers today.</p>
+                    <p class="text-lg text-gray-700 leading-relaxed">During World War II, Turing worked at Bletchley Park, the British code-breaking center. He was a key figure in deciphering the German <strong class="text-blue-600">Enigma code</strong>, an effort that shortened the war and saved countless lives.</p>
+                </div>
+                <div class="md:w-1/2 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                    <img src="https://placehold.co/600x400/E5E7EB/4B5563?text=Image+of+the+Enigma+Machine" alt="The Enigma Machine" class="w-full h-auto object-cover">
+                </div>
+            </div>
+            <div class="mt-8 flex justify-between">
+                <button onclick="prevSlide()" class="bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-full shadow-md hover:bg-gray-400 transition duration-300">
+                    Previous
+                </button>
+                <button onclick="nextSlide()" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-md hover:bg-blue-700 transition duration-300">
+                    Next
+                </button>
+            </div>
+            <div class="mt-6 text-center">
+                <a href="https://www.youtube.com/watch?v=d_kH0sN_Bv8" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-700 hover:underline">
+                    Watch a video on the Turing Machine
+                </a>
+            </div>
+        </div>
+
+        <!-- Slide 3: Contributions to AI -->
+        <div id="slide-3" class="slide min-h-[500px]">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">The Dawn of Artificial Intelligence</h2>
+            <div class="md:flex md:flex-row-reverse md:space-x-8">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">In his 1950 paper, Turing introduced the central question of AI: <em class="font-semibold text-gray-800">"Can machines think?"</em> He then proposed his solution: the famous **Turing Test**, also known as the "Imitation Game."</p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">The test involves a human judge who engages in a text-based conversation with two unseen entities: a human and a machine. If the judge cannot tell the machine from the human, the machine is said to have passed the test.</p>
+                    <p class="text-lg text-gray-700 leading-relaxed">Turing's work was revolutionary because it shifted the debate from "what is thinking?" to the more practical question of "what can machines do?" He also foresaw the importance of **machine learning** and neural networks long before the technology existed to implement them.</p>
+                </div>
+                <div class="md:w-1/2 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                    <img src="https://placehold.co/600x400/E5E7EB/4B5563?text=Diagram+of+the+Turing+Test" alt="Diagram of the Turing Test" class="w-full h-auto object-cover">
+                </div>
+            </div>
+            <div class="mt-8 flex justify-between">
+                <button onclick="prevSlide()" class="bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-full shadow-md hover:bg-gray-400 transition duration-300">
+                    Previous
+                </button>
+                <button onclick="nextSlide()" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-md hover:bg-blue-700 transition duration-300">
+                    Next
+                </button>
+            </div>
+            <div class="mt-6 text-center">
+                <a href="https://www.youtube.com/watch?v=3w_T4q-o3qQ" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-700 hover:underline">
+                    Watch an explanation of the Turing Test
+                </a>
+            </div>
+        </div>
+
+        <!-- Slide 4: Legacy and Modern Influence -->
+        <div id="slide-4" class="slide min-h-[500px]">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Turing's Lasting Legacy</h2>
+            <div class="md:flex md:space-x-8">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">The Turing Machine is the fundamental theoretical basis for all modern computing. It established the concept of a programmable, all-purpose machine, which is a precursor to every laptop, smartphone, and supercomputer today.</p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">Turing’s ideas on machine learning, especially his concept of a "child machine" that learns from experience, are the bedrock of modern AI. His work on neural networks and reinforcement learning directly informs the development of today's deep learning models, which power everything from self-driving cars to generative AI.</p>
+                    <p class="text-lg text-gray-700 leading-relaxed">The Turing Test, though not a perfect measure, remains a powerful conceptual tool. The drive to create machines that can pass it has pushed the boundaries of natural language processing and conversational AI, leading to the sophisticated chatbots and virtual assistants we use every day.</p>
+                </div>
+                <div class="md:w-1/2 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                    <img src="https://placehold.co/600x400/E5E7EB/4B5563?text=Illustration+of+a+Neural+Network" alt="An illustration of a neural network" class="w-full h-auto object-cover">
+                </div>
+            </div>
+            <div class="mt-8 flex justify-between">
+                <button onclick="prevSlide()" class="bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-full shadow-md hover:bg-gray-400 transition duration-300">
+                    Previous
+                </button>
+                <button onclick="showSlide(1)" class="bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-full shadow-md hover:bg-gray-400 transition duration-300">
+                    Restart
+                </button>
+            </div>
+            <div class="mt-6 text-center">
+                <a href="https://www.forbes.com/sites/forbestechcouncil/2021/01/29/alan-turings-legacy-the-unseen-influence-on-todays-ai/?sh=303a27072a44" target="_blank" class="inline-block mt-4 text-sm text-blue-500 hover:text-blue-700 hover:underline">
+                    Read more about Turing's influence on modern AI
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let currentSlideIndex = 1;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide, i) => {
+                if (i + 1 === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            currentSlideIndex = index;
+        }
+
+        function nextSlide() {
+            if (currentSlideIndex < 4) {
+                showSlide(currentSlideIndex + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlideIndex > 1) {
+                showSlide(currentSlideIndex - 1);
+            }
+        }
+
+        // Initialize presentation
+        showSlide(currentSlideIndex);
+    </script>
+</body>
+</html>
