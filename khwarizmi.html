@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Khwarizmi: The Father of Algorithms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f4f8;
+            color: #1e293b;
+        }
+        .slide-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .slide {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            min-height: 600px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2.5rem;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .slide-content {
+            flex-grow: 1;
+        }
+        .slide-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            color: #334155;
+        }
+        .slide-content p, .slide-content ul {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+        .slide-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        .slide-image {
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+        .nav-button {
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.1s;
+            cursor: pointer;
+            border: none;
+        }
+        .nav-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+        .nav-button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+        }
+        .resource-button {
+            background-color: #10b981;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .resource-button:hover {
+            background-color: #059669;
+        }
+        .link-text {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        <!-- Slide 1: Title -->
+        <div id="slide1" class="slide active">
+            <div class="slide-content">
+                <h1 class="slide-title">Al-Khwarizmi: The Father of Algorithms</h1>
+                <div class="flex flex-col items-center justify-center h-full">
+                    <p class="text-center text-lg mt-4">Exploring the life and legacy of the groundbreaking mathematician who laid the foundations for modern computer science and artificial intelligence.</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Early Life and the House of Wisdom -->
+        <div id="slide2" class="slide">
+            <div class="slide-content">
+                <h1 class="slide-title">Early Life and the House of Wisdom</h1>
+                <p>Born in the region of Khwarizm (modern-day Uzbekistan) around 780 CE, Muhammad ibn Musa al-Khwarizmi was a scholar during the golden age of the Islamic world. His work flourished in Baghdad, the capital of the Abbasid Caliphate, where he was a member of the renowned House of Wisdom.</p>
+                <p>The House of Wisdom was a major intellectual center, a library, and a translation academy that attracted scholars from across the world. It was here that Al-Khwarizmi worked on his most influential treatises, translating and synthesizing knowledge from Greek, Persian, and Indian sources.</p>
+                
+            </div>
+        </div>
+
+        <!-- Slide 3: Major Contributions -->
+        <div id="slide3" class="slide">
+            <div class="slide-content">
+                <h1 class="slide-title">Major Contributions</h1>
+                <p>Al-Khwarizmi's most significant work, <em>Kitab al-Jabr wa'l-Muqabala</em>, gave the world the discipline of algebra. The word "algebra" is derived from "al-jabr," which means "completion" or "restoration." He provided a systematic method for solving linear and quadratic equations, which was a monumental leap forward in mathematics.</p>
+                <p>His book also introduced the Hindu-Arabic numeral system, including the concept of zero, to the Western world. This decimal system with a place value notation replaced the cumbersome Roman numerals and revolutionized mathematics and commerce.</p>
+                <p>Finally, his name is the origin of the word <strong>"algorithm"</strong>, which is a key concept for computer science and artificial intelligence. He provided step-by-step procedures for solving mathematical problems, a concept that is the very foundation of modern computing.</p>
+                <div class="flex flex-col md:flex-row md:justify-center items-center gap-4 mt-8">
+                    <a href="https://www.aljazeera.com/video/science-in-a-golden-age/2015/10/20/al-khwarizmi-the-father-of-algebra" target="_blank" class="resource-button">
+                        Watch an Al-Khwarizmi documentary
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=gTiNfWTKA_0" target="_blank" class="resource-button">
+                        Explore the History of Algorithms
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Link to AI and Algorithms -->
+        <div id="slide4" class="slide">
+            <div class="slide-content">
+                <h1 class="slide-title">From Algorithms to AI</h1>
+                <p>The principles laid out by Al-Khwarizmi a millennium ago are the direct precursors to modern computer science and artificial intelligence. An algorithm is a precise, unambiguous set of instructions for solving a problem or performing a calculation. Every piece of software, from a simple calculator to a complex AI model, is built upon algorithms.</p>
+                <p>In AI, algorithms are used for everything from machine learning to natural language processing. For example, a machine learning model uses an algorithm to find patterns in data and make predictions, while a sorting algorithm can efficiently organize data for a program. Without Al-Khwarizmi’s foundational work, the development of computer programming and AI would be unimaginable.</p>
+                
+            </div>
+        </div>
+
+        <!-- Slide 5: Legacy -->
+        <div id="slide5" class="slide">
+            <div class="slide-content">
+                <h1 class="slide-title">A Lasting Legacy</h1>
+                <p>Al-Khwarizmi's contributions have had a profound and lasting impact on the world. His work on algebra provided a powerful new tool for solving problems in science, engineering, and finance. The adoption of the Hindu-Arabic numeral system streamlined mathematics and paved the way for modern accounting and computation.</p>
+                <p>Today, as we live in a world driven by technology and data, we are constantly interacting with the legacy of Al-Khwarizmi. From the algorithms that power our search engines to the complex models that enable self-driving cars, his influence is felt in virtually every aspect of our digital lives.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <button id="prevBtn" class="nav-button">Previous</button>
+        <button id="nextBtn" class="nav-button">Next</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[n].classList.add('active');
+            updateButtons();
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        function updateButtons() {
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Initialize the presentation
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
