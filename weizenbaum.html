@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legacy of Joseph Weizenbaum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #1e293b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .slide-container {
+            width: 100%;
+            max-width: 960px;
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            min-height: 600px;
+        }
+        .slide {
+            display: none;
+            flex-grow: 1;
+        }
+        .slide.active {
+            display: block;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        .nav-buttons button {
+            background-color: #3b82f6;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .nav-buttons button:hover {
+            background-color: #2563eb;
+        }
+        .nav-buttons button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .resource-button {
+            background-color: #10b981;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .resource-button:hover {
+            background-color: #059669;
+        }
+        .resource-list li a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .resource-list li a:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            margin: auto;
+            padding: 2rem;
+            border-radius: 1rem;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            position: relative;
+        }
+        .close-button {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <!-- Main slide container -->
+    <div class="slide-container">
+        <!-- Slide 1: Title Page -->
+        <div id="slide-1" class="slide active">
+            <h1 class="text-4xl font-bold text-center mb-4">The Legacy of Joseph Weizenbaum</h1>
+            <p class="text-xl text-center text-gray-600 mb-8">A pioneer of AI and its most vocal critic.</p>
+            <div class="image-container">
+                <img src="https://placehold.co/400x300/4a5568/ffffff?text=Joseph+Weizenbaum" alt="A photo of Joseph Weizenbaum">
+            </div>
+            <p class="text-center text-gray-700">Presentation by [Your Name]</p>
+        </div>
+
+        <!-- Slide 2: Early Life -->
+        <div id="slide-2" class="slide">
+            <h2 class="text-3xl font-bold mb-4">Early Life and Background</h2>
+            <div class="flex items-center space-x-6">
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/150x150/f7fafc/1e293b?text=Berlin" alt="Illustration of Berlin">
+                </div>
+                <div class="flex-grow">
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Born in Berlin, Germany in 1923 to a Jewish family.</li>
+                        <li>Fled Nazi Germany in 1936, immigrating to the United States.</li>
+                        <li>Served as a meteorologist in the U.S. Army.</li>
+                        <li>Earned a Bachelor's and Master's degree in Mathematics from Wayne State University.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Major Contributions -->
+        <div id="slide-3" class="slide">
+            <h2 class="text-3xl font-bold mb-4">Major Contributions to AI</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <div class="image-container">
+                        <img src="https://placehold.co/400x300/e2e8f0/1e293b?text=ELIZA+Interface" alt="Illustration of the ELIZA program interface">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>**SLIP:** Developed the Symmetric List Processing language, an early list-processing system.</li>
+                        <li>**ELIZA (1966):** Created ELIZA, one of the first conversational programs.</li>
+                        <li>**The "DOCTOR" Script:** The most famous script for ELIZA, it mimicked a psychotherapist using simple pattern-matching.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="mt-4 text-center italic text-gray-600">ELIZA was designed to show the superficiality of human-computer conversation.</p>
+        </div>
+
+        <!-- Slide 4: The ELIZA Effect -->
+        <div id="slide-4" class="slide">
+            <h2 class="text-3xl font-bold mb-4">The ELIZA Effect</h2>
+            <div class="image-container">
+                <img src="https://placehold.co/400x200/475569/ffffff?text=AI+Empathy" alt="Illustration of AI and empathy">
+            </div>
+            <p class="text-lg mb-4 leading-relaxed">
+                Weizenbaum was shocked to discover that users, including his own secretary,
+                attributed human-like qualities and understanding to ELIZA. This phenomenon,
+                now known as the **"ELIZA effect,"** revealed the human tendency to
+                anthropomorphize machines.
+            </p>
+            <p class="text-lg leading-relaxed">
+                This experience was a turning point for Weizenbaum, shifting him from an AI
+                enthusiast to one of its most prominent critics.
+            </p>
+        </div>
+
+        <!-- Slide 5: The Critic -->
+        <div id="slide-5" class="slide">
+            <h2 class="text-3xl font-bold mb-4">The Ethical Critic</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <div class="image-container">
+                        <img src="https://placehold.co/200x300/0f172a/f8fafc?text=Book+Cover" alt="Image of the book cover for Computer Power and Human Reason">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Published his influential book, **"Computer Power and Human Reason"** (1976).</li>
+                        <li>Argued that computers should never be used for tasks requiring **wisdom, judgment, or compassion**.</li>
+                        <li>Warned against blindly ceding human authority to machines.</li>
+                        <li>Emphasized the crucial difference between **"calculation"** and **"judgment."**</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Modern Influence -->
+        <div id="slide-6" class="slide">
+            <h2 class="text-3xl font-bold mb-4">Influence on Modern AI</h2>
+            <div class="image-container">
+                <img src="https://placehold.co/400x200/334155/f8fafc?text=Modern+Chatbots" alt="Illustration of modern AI chatbots">
+            </div>
+            <p class="text-lg leading-relaxed mb-4">
+                Weizenbaum's ELIZA is a direct ancestor of modern conversational AI, including
+                customer service bots and large language models like ChatGPT. His work demonstrated the
+                potential of these systems and set the stage for their development.
+            </p>
+            <p class="text-lg leading-relaxed">
+                More importantly, his ethical concerns and the "ELIZA effect" continue to be
+                central to the global conversation about AI. His legacy reminds us to question
+                the moral implications and social responsibilities of the technology we create.
+            </p>
+        </div>
+
+        <!-- Slide 7: Resources -->
+        <div id="slide-7" class="slide">
+            <h2 class="text-3xl font-bold mb-4 text-center">Additional Resources</h2>
+            <p class="text-lg text-center mb-6">
+                Explore more about Joseph Weizenbaum and his work with these links.
+            </p>
+            <div class="flex flex-col items-center space-y-4">
+                <button id="open-modal-btn" class="resource-button">
+                    View Resources
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+        <button id="prev-btn" disabled>Previous</button>
+        <button id="next-btn">Next</button>
+    </div>
+
+    <!-- Modal for Resources -->
+    <div id="resources-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 class="text-2xl font-bold mb-4">Additional Resources</h3>
+            <p class="mb-4 text-sm text-gray-500">
+                (Note: These are example links as direct fetching is not possible)
+            </p>
+            <ul class="resource-list list-disc list-inside space-y-2 text-lg">
+                <li><a href="https://example.com/weizenbaum-documentary" target="_blank" rel="noopener noreferrer">Video: Joseph Weizenbaum Documentary</a></li>
+                <li><a href="https://example.com/eliza-demo" target="_blank" rel="noopener noreferrer">Video: A Demo of the Original ELIZA Program</a></li>
+                <li><a href="https://example.com/book-summary" target="_blank" rel="noopener noreferrer">Article: Summary of "Computer Power and Human Reason"</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const modal = document.getElementById('resources-modal');
+            const openModalBtn = document.getElementById('open-modal-btn');
+            const closeBtn = document.querySelector('.close-button');
+
+            let currentSlide = 0;
+
+            function showSlide(n) {
+                // Hide all slides
+                slides.forEach(slide => slide.classList.remove('active'));
+                // Show the current slide
+                slides[n].classList.add('active');
+                // Update button states
+                prevBtn.disabled = n === 0;
+                nextBtn.disabled = n === slides.length - 1;
+            }
+
+            function nextSlide() {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            }
+
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            }
+
+            // Event listeners for navigation buttons
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Modal event listeners
+            if (openModalBtn) {
+                openModalBtn.addEventListener('click', () => {
+                    modal.style.display = 'flex';
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+            }
+
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Initial state
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
