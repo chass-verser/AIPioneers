@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legacy of Arthur Samuel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        .presentation-container {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 960px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 600px;
+        }
+        .slide {
+            flex-grow: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.hidden {
+            display: none;
+        }
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+        .slide-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin-bottom: 2rem;
+        }
+        .slide-content {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #374151;
+            max-width: 700px;
+        }
+        .bullet-list {
+            text-align: left;
+            margin-top: 1rem;
+            list-style: none;
+            padding-left: 0;
+        }
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .bullet-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #4f46e5;
+            font-weight: bold;
+        }
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        .nav-button {
+            padding: 0.75rem 2rem;
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+        .nav-button:hover {
+            background-color: #4338ca;
+        }
+        .nav-button:active {
+            transform: scale(0.98);
+        }
+        .nav-button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+        }
+        .image-container {
+            margin: 2rem 0;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .link-button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #d1d5db;
+            color: #1f2937;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .link-button:hover {
+            background-color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presentation-container">
+        
+        <!-- Slide 0: Title Slide -->
+        <div id="slide-0" class="slide">
+            <h1 class="slide-title">The Legacy of Arthur Samuel</h1>
+            <p class="slide-subtitle">A Pioneer of Artificial Intelligence and Machine Learning</p>
+            <div class="image-container">
+                <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Portrait+of+Arthur+Samuel" alt="A portrait of Arthur Samuel, a pioneer of computer science.">
+            </div>
+            <p class="slide-content">
+                Arthur Samuel (1901-1990) was an American computer scientist who made foundational contributions to the field of artificial intelligence. He is widely credited with coining the term "machine learning" in 1959.
+            </p>
+        </div>
+
+        <!-- Slide 1: Early Life and Career -->
+        <div id="slide-1" class="slide hidden">
+            <h2 class="slide-title">Early Life and Career</h2>
+            <div class="slide-content">
+                <p>Arthur Samuel's career spanned electrical engineering and computer science, laying the groundwork for his later work in AI. </p>
+                <ul class="bullet-list">
+                    <li>Born in Emporia, Kansas, Samuel received a master's degree in Electrical Engineering from MIT in 1926.</li>
+                    <li>He worked at Bell Laboratories on vacuum tubes and improved radar during World War II.</li>
+                    <li>He later joined IBM in 1949, where he began his pioneering work on stored-program computers and non-numerical computation, which was a major shift at the time.</li>
+                </ul>
+            </div>
+            <div class="image-container">
+                <img src="https://placehold.co/600x400/e2e8f0/64748b?text=IBM+701+Computer" alt="The IBM 701, the early computer Arthur Samuel used for his checkers program.">
+            </div>
+            <a href="https://www.youtube.com/watch?v=fsdLxarwmTk" target="_blank" class="link-button">Watch a video on the IBM 701</a>
+        </div>
+        
+        <!-- Slide 2: The Checkers-Playing Program -->
+        <div id="slide-2" class="slide hidden">
+            <h2 class="slide-title">The Checkers-Playing Program</h2>
+            <div class="slide-content">
+                <p>Samuel's most famous achievement was his checkers-playing program, which became the first publicly recognized machine learning system.</p>
+                <ul class="bullet-list">
+                    <li>Developed for the IBM 701, the program was designed to improve its performance through experience.</li>
+                    <li>It used a heuristic search algorithm and an evaluation function to determine the best move.</li>
+                    <li>In 1962, the program famously defeated a self-proclaimed checkers master, Robert Nealey, demonstrating the power of a self-learning system.</li>
+                </ul>
+            </div>
+            <div class="image-container">
+                <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Diagram+of+a+Checkers+Board+with+Heuristics" alt="A simple diagram showing a checkers board and algorithmic thought processes.">
+            </div>
+            <a href="https://people.csail.mit.edu/brooks/idocs/Samuel.pdf" target="_blank" class="link-button">Read Samuel's Original Paper</a>
+        </div>
+        
+        <!-- Slide 3: Key Contributions to AI -->
+        <div id="slide-3" class="slide hidden">
+            <h2 class="slide-title">Key Contributions to AI</h2>
+            <div class="slide-content">
+                <p>Samuel's work laid the conceptual and technical foundation for modern AI and machine learning.</p>
+                <ul class="bullet-list">
+                    <li>He pioneered the concepts of "rote learning" and "generalization learning," where the program remembered past board positions and learned from them.</li>
+                    <li>His work was an early example of reinforcement learning, where the program's evaluation function was updated based on wins and losses.</li>
+                    <li>Samuel's methods also influenced the design of early computer processors, specifically the logical instructions for non-numerical tasks.</li>
+                </ul>
+            </div>
+             <div class="image-container">
+                <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Diagram+of+a+Learning+Algorithm" alt="A conceptual diagram showing how a machine learning model learns from data.">
+            </div>
+             <a href="https://indiaai.gov.in/article/mastering-minds-a-journey-into-the-legacy-of-the-samuel-checkers-playing-program-1959" target="_blank" class="link-button">Explore the legacy of Samuel's program</a>
+        </div>
+
+         <!-- Slide 4: Influence on Modern AI -->
+        <div id="slide-4" class="slide hidden">
+            <h2 class="slide-title">Influence on Modern AI</h2>
+            <div class="slide-content">
+                <p>Today, Arthur Samuel's work is considered a cornerstone of the field, and his ideas are more relevant than ever.</p>
+                <ul class="bullet-list">
+                    <li>The principles of self-play, learning from data, and dynamic evaluation functions are core to modern AI applications like AlphaGo and self-driving cars.</li>
+                    <li>His focus on teaching a machine to learn without explicit programming continues to be the central goal of machine learning research.</li>
+                    <li>The term "machine learning" itself, coined by Samuel, has become a household name, reflecting the monumental shift he helped to initiate.</li>
+                </ul>
+            </div>
+             <div class="image-container">
+                <img src="https://placehold.co/600x400/e2e8f0/64748b?text=AI+Icon+Illustration" alt="A stylized illustration of a brain and circuits, representing artificial intelligence.">
+            </div>
+            <a href="https://www.youtube.com/@PioneersofAI" target="_blank" class="link-button">Discover more AI pioneers</a>
+        </div>
+
+        <div class="navigation-buttons">
+            <button id="prev-btn" class="nav-button" disabled>Previous</button>
+            <button id="next-btn" class="nav-button">Next</button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            let currentSlideIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.add('hidden');
+                    if (i === index) {
+                        slide.classList.remove('hidden');
+                    }
+                });
+                updateButtons();
+            }
+
+            function updateButtons() {
+                prevBtn.disabled = currentSlideIndex === 0;
+                nextBtn.disabled = currentSlideIndex === slides.length - 1;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlideIndex < slides.length - 1) {
+                    currentSlideIndex++;
+                    showSlide(currentSlideIndex);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlideIndex > 0) {
+                    currentSlideIndex--;
+                    showSlide(currentSlideIndex);
+                }
+            });
+
+            // Initial setup
+            showSlide(currentSlideIndex);
+        });
+    </script>
+</body>
+</html>
