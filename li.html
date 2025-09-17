@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Worlds I See: A Presentation on Fei-Fei Li</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #f0f4f8, #e2e8f0);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slide-container {
+            width: 95%;
+            max-width: 900px;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 2rem;
+            transition: all 0.5s ease-in-out;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-button {
+            transition: all 0.3s ease;
+        }
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .link-button {
+            transition: all 0.3s ease;
+        }
+        .link-button:hover {
+            transform: scale(1.05);
+            background-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <div class="slide-container">
+
+        <!-- Slide 1: Title Slide -->
+        <div id="slide-1" class="slide active">
+            <div class="flex flex-col items-center justify-center h-full text-center p-8">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-800 mb-4">The Worlds I See</h1>
+                <h2 class="text-2xl sm:text-3xl font-semibold text-slate-600 mb-6">A Presentation on the AI Pioneer, Fei-Fei Li</h2>
+                <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden mb-8 shadow-xl">
+                    <img src="https://placehold.co/800x800/e0e0e0/000?text=Fei-Fei+Li" alt="Fei-Fei Li" class="w-full h-full object-cover">
+                </div>
+                <p class="text-lg text-gray-500 max-w-lg mx-auto">Click "Next" to begin the presentation.</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Early Life -->
+        <div id="slide-2" class="slide">
+            <div class="flex flex-col md:flex-row items-center p-4 sm:p-8 space-y-8 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Early Life & Immigrant Journey</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        Fei-Fei Li was born in Beijing, China, in 1976 and immigrated to the United States with her parents in 1992 at the age of 16. Her family settled in Parsippany, New Jersey, where they worked long hours in a dry-cleaning shop. Despite the financial and cultural challenges, she excelled academically.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        She earned a full scholarship to Princeton University, where she studied physics and computer science. Her life story is a testament to perseverance, curiosity, and the pursuit of knowledge against all odds.
+                    </p>
+                    <a href="https://hai.stanford.edu/news/fei-fei-li-candid-look-young-immigrants-rise-ai-trailblazer" target="_blank" class="link-button inline-block bg-sky-500 text-white font-semibold py-3 px-6 rounded-full text-center shadow-lg hover:bg-sky-600 transition duration-300">
+                        Read an Interview
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="w-full max-w-xs sm:max-w-md rounded-xl overflow-hidden shadow-xl">
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Major Contributions -->
+        <div id="slide-3" class="slide">
+            <div class="flex flex-col md:flex-row items-center p-4 sm:p-8 space-y-8 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/2 order-2 md:order-1 flex justify-center">
+                    <div class="w-full max-w-xs sm:max-w-md rounded-xl overflow-hidden shadow-xl">
+                         
+                    </div>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">The Creation of ImageNet</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        While at Princeton, Dr. Li's team created ImageNet, a groundbreaking dataset containing over 14 million hand-annotated images. The goal was to "teach" computers to recognize objects in the same way a child learns. This monumental project became the catalyst for the deep learning revolution.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        She is also the co-founder of the Stanford Institute for Human-Centered Artificial Intelligence (HAI), dedicated to studying, guiding, and developing AI that is beneficial and respectful of humanity.
+                    </p>
+                    <a href="https://www.ted.com/talks/fei_fei_li_how_we_re_teaching_computers_to_understand_pictures" target="_blank" class="link-button inline-block bg-emerald-500 text-white font-semibold py-3 px-6 rounded-full text-center shadow-lg hover:bg-emerald-600 transition duration-300">
+                        Watch her TED Talk
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Influence -->
+        <div id="slide-4" class="slide">
+            <div class="flex flex-col md:flex-row items-center p-4 sm:p-8 space-y-8 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Influence on Modern AI</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        ImageNet's success spurred a dramatic leap forward in computer vision, leading to the development of powerful AI models and applications that now touch our daily lives, from facial recognition to self-driving cars.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        Her work emphasizes a human-centered approach to AI, focusing on the ethical and societal implications of the technology. She advocates for AI development that augments, rather than replaces, human capabilities.
+                    </p>
+                    <a href="https://www.youtube.com/shorts/V9o4GtK5CUc" target="_blank" class="link-button inline-block bg-indigo-500 text-white font-semibold py-3 px-6 rounded-full text-center shadow-lg hover:bg-indigo-600 transition duration-300">
+                        Learn about the Challenge
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="w-full max-w-xs sm:max-w-md rounded-xl overflow-hidden shadow-xl">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Thank You -->
+        <div id="slide-5" class="slide">
+            <div class="flex flex-col items-center justify-center h-full text-center p-8">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-slate-800 mb-4">Thank You</h2>
+                <p class="text-xl text-gray-700 max-w-lg mx-auto mb-8">
+                    I hope you enjoyed learning about the incredible work of Fei-Fei Li.
+                </p>
+                <div class="w-48 h-48 rounded-full overflow-hidden mb-8 shadow-xl">
+                     
+                </div>
+                <p class="text-gray-500">Presentation created with information from multiple sources including Stanford HAI, PBS, and TED.</p>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between mt-8 p-4 bg-gray-100 rounded-b-2xl">
+            <button id="prevBtn" class="nav-button flex items-center justify-center text-gray-600 bg-white border border-gray-300 rounded-full px-6 py-3 shadow-md hover:bg-gray-200 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Previous
+            </button>
+            <button id="nextBtn" class="nav-button flex items-center justify-center text-white bg-blue-600 rounded-full px-6 py-3 shadow-md hover:bg-blue-700 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                Next
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentSlide = 0;
+
+            const showSlide = (index) => {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+                updateButtons(index);
+            };
+
+            const updateButtons = (index) => {
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === slides.length - 1;
+            };
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            // Initial state
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
