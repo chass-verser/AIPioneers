@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin Minsky: Pioneer of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide {
+            width: 90%;
+            max-width: 960px;
+            height: 80%;
+            background-color: #27285c;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            padding: 3rem;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 2rem;
+            position: relative;
+        }
+        .slide h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #d1d5db;
+        }
+        .slide h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        .slide p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #a0a0a0;
+        }
+        .slide.active {
+            display: flex;
+        }
+        .navigation-buttons {
+            position: absolute;
+            bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-btn {
+            background-color: #6c63ff;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
+        }
+        .nav-btn:hover {
+            background-color: #5752cc;
+        }
+        .link-button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .link-button {
+            background-color: #a0a0a0;
+            color: #27285c;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+        .link-button:hover {
+            background-color: #d1d5db;
+        }
+        .slide-image {
+            max-width: 100%;
+            max-height: 250px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex items-center justify-center">
+
+    <div class="slide-container">
+        <!-- Slide 1: Introduction -->
+        <div id="slide1" class="slide active">
+            <h1 class="text-white">Marvin Minsky: Pioneer of Artificial Intelligence</h1>
+            <p>A look into the life and groundbreaking contributions of one of the founding fathers of AI and cognitive science.</p>
+            <div class="navigation-buttons">
+                <button id="nextBtn" class="nav-btn">Start</button>
+            </div>
+        </div>
+
+        <!-- Slide 2: Early Life and Education -->
+        <div id="slide2" class="slide">
+            <h1 class="text-white">Early Life & Groundbreaking Ideas</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Marvin_Minsky.jpg/800px-Marvin_Minsky.jpg" alt="Marvin Minsky portrait" class="slide-image">
+            <p>Born in New York City in 1927, Marvin Minsky's intellectual curiosity led him to Harvard and Princeton. He was a polymath who delved into mathematics, physics, and psychology, always with the goal of understanding the human mind.</p>
+            <p>In 1951, he built the first randomly wired neural network learning machine, called SNARC (Stochastic Neural Analog Reinforcement Calculator), as part of his doctoral thesis. It simulated a rat navigating a maze using analog components, a key step in early connectionism.</p>
+            <div class="link-button-container">
+                <a href="https://www.youtube.com/watch?v=kR2eXf3p22w" target="_blank" class="link-button">Video: SNARC Explanation</a>
+            </div>
+            <div class="navigation-buttons">
+                <button id="prevBtn1" class="nav-btn">Previous</button>
+                <button id="nextBtn1" class="nav-btn">Next</button>
+            </div>
+        </div>
+
+        <!-- Slide 3: Major Contributions -->
+        <div id="slide3" class="slide">
+            <h1 class="text-white">Major Contributions</h1>
+            <p>Minsky's work spanned multiple fields, often blurring the lines between computer science and cognitive psychology. His 1957 invention, the **Confocal Microscope**, revolutionized biology by allowing high-resolution 3D imaging of specimens. Its use of a pinhole to block out-of-focus light was a crucial innovation. </p>
+            <div class="link-button-container">
+                <a href="https://www.youtube.com/watch?v=E7oV_9e4X0o" target="_blank" class="link-button">Watch: Confocal Microscope Explained</a>
+            </div>
+            <p>He co-founded the MIT AI Laboratory in 1959 with John McCarthy, transforming the field into a dedicated academic discipline.</p>
+            <div class="navigation-buttons">
+                <button id="prevBtn2" class="nav-btn">Previous</button>
+                <button id="nextBtn2" class="nav-btn">Next</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: "The Society of Mind" -->
+        <div id="slide4" class="slide">
+            <h1 class="text-white">The Society of Mind</h1>
+            <p>Minsky's most famous work, "The Society of Mind," proposed a radical theory: the mind is not a single entity, but a "society" of simpler, non-intelligent "agents" that work together to produce complex intelligence. These agents, or simple processes, can be as basic as a "Grasping agent" or a "Balancing agent."</p>
+            <img src="https://jaress.medium.com/the-turing-option-and-minskys-society-of-mind-theory-explained-4b25807b0733" alt="Society of Mind Illustration" class="slide-image">
+            <p>This theory suggests that what we perceive as consciousness and thought is an emergent property arising from the interactions of these countless simple processes.</p>
+            <div class="link-button-container">
+                <a href="https://ocw.mit.edu/courses/6-868j-the-society-of-mind-fall-2011/resources/lecture-1-introduction/" target="_blank" class="link-button">MIT Lecture on "Society of Mind"</a>
+            </div>
+            <div class="navigation-buttons">
+                <button id="prevBtn3" class="nav-btn">Previous</button>
+                <button id="nextBtn3" class="nav-btn">Next</button>
+            </div>
+        </div>
+
+        <!-- Slide 5: Legacy -->
+        <div id="slide5" class="slide">
+            <h1 class="text-white">Influence on Modern AI</h1>
+            <p>Minsky's work laid the groundwork for many modern AI concepts. His theories on frames, knowledge representation, and his emphasis on symbolic AI influenced the development of expert systems. His early work on neural networks, though he later became a critic of early connectionist models, provided foundational concepts that are now central to deep learning and modern AI systems.</p>
+            <p>His vision of intelligence as a collection of interacting parts continues to be a powerful metaphor in cognitive science and AI research today.</p>
+            <div class="navigation-buttons">
+                <button id="prevBtn4" class="nav-btn">Previous</button>
+                <button id="nextBtn4" class="nav-btn">End</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+
+            const showSlide = (index) => {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+            };
+
+            const nextSlide = () => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                if (currentSlide === 0) {
+                    currentSlide = 1; // Loop back to the start, skipping the first title slide
+                }
+                showSlide(currentSlide);
+            };
+
+            const prevSlide = () => {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                if (currentSlide === 0) {
+                    currentSlide = slides.length - 1; // Loop back to the end
+                }
+                showSlide(currentSlide);
+            };
+
+            // Event listeners for navigation buttons
+            document.getElementById('nextBtn').addEventListener('click', nextSlide);
+            document.getElementById('prevBtn1').addEventListener('click', prevSlide);
+            document.getElementById('nextBtn1').addEventListener('click', nextSlide);
+            document.getElementById('prevBtn2').addEventListener('click', prevSlide);
+            document.getElementById('nextBtn2').addEventListener('click', nextSlide);
+            document.getElementById('prevBtn3').addEventListener('click', prevSlide);
+            document.getElementById('nextBtn3').addEventListener('click', nextSlide);
+            document.getElementById('prevBtn4').addEventListener('click', prevSlide);
+            document.getElementById('nextBtn4').addEventListener('click', () => {
+                alert('Presentation ended. Thank you for viewing!');
+                currentSlide = 0;
+                showSlide(currentSlide);
+            });
+
+            // Prevent the alert from showing in the iframe
+            window.alert = function(message) {
+                console.log("Alert prevented: " + message);
+                const messageBox = document.createElement('div');
+                messageBox.className = 'fixed inset-0 flex items-center justify-center z-50';
+                messageBox.innerHTML = `
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl text-center">
+                        <p class="text-white text-lg">${message}</p>
+                        <button class="mt-4 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded" onclick="this.parentElement.parentElement.remove()">OK</button>
+                    </div>
+                `;
+                document.body.appendChild(messageBox);
+            };
+        });
+    </script>
+
+</body>
+</html>
