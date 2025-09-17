@@ -1,10 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Awesome Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pioneers of Artificial Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        .pioneer-card {
+            background-color: #161b22;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .pioneer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .pioneer-link-button {
+            background-image: linear-gradient(to right, #4c529e, #6e42b2, #a855f7);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .pioneer-link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(168, 85, 247, 0.4);
+        }
+    </style>
 </head>
-<body>
-<h1>Hello, World!</h1>
-<p>Welcome to my first GitHub Pages website.</p>
+<body class="p-6 md:p-12">
+
+    <!-- Header Section -->
+    <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4">The Pioneers of Artificial Intelligence</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto">
+            An AI pioneer is an individual who fundamentally shaped the field through groundbreaking research, innovative theories, or the creation of foundational tools that enabled future generations of AI development. Their work laid the intellectual and technical groundwork, moving AI from a theoretical concept to a practical, transformative science.
+        </p>
+    </header>
+
+    <!-- Pioneers Grid Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+        <!-- Al-Khwarizmi Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=Al-Khwarizmi" alt="Image of Al-Khwarizmi">
+            <h2 class="text-2xl font-bold text-white">Al-Khwarizmi</h2>
+            <p class="text-sm text-gray-400 mb-4">c. 780 – c. 850</p>
+            <a href="khwarizimi.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+
+        <!-- George Boole Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=George+Boole" alt="Image of George Boole">
+            <h2 class="text-2xl font-bold text-white">George Boole</h2>
+            <p class="text-sm text-gray-400 mb-4">1815 – 1864</p>
+            <a href="boole.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+
+        <!-- Arthur Samuel Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=Arthur+Samuel" alt="Image of Arthur Samuel">
+            <h2 class="text-2xl font-bold text-white">Arthur Samuel</h2>
+            <p class="text-sm text-gray-400 mb-4">1901 – 1990</p>
+            <a href="samuel.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+
+        <!-- Alan Turing Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=Alan+Turing" alt="Image of Alan Turing">
+            <h2 class="text-2xl font-bold text-white">Alan Turing</h2>
+            <p class="text-sm text-gray-400 mb-4">1912 – 1954</p>
+            <a href="turing.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+
+        <!-- Herbert Simon Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=Herbert+Simon" alt="Image of Herbert Simon">
+            <h2 class="text-2xl font-bold text-white">Herbert Simon</h2>
+            <p class="text-sm text-gray-400 mb-4">1916 – 2001</p>
+            <a href="simon.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+        
+        <!-- Joseph Weizenbaum Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=Joseph+Weizenbaum" alt="Image of Joseph Weizenbaum">
+            <h2 class="text-2xl font-bold text-white">Joseph Weizenbaum</h2>
+            <p class="text-sm text-gray-400 mb-4">1923 – 2008</p>
+            <a href="weizenbaum.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+
+        <!-- John McCarthy Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=John+McCarthy" alt="Image of John McCarthy">
+            <h2 class="text-2xl font-bold text-white">John McCarthy</h2>
+            <p class="text-sm text-gray-400 mb-4">1927 – 2011</p>
+            <a href="mccarthy.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+
+        <!-- Marvin Minsky Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=Marvin+Minsky" alt="Image of Marvin Minsky">
+            <h2 class="text-2xl font-bold text-white">Marvin Minsky</h2>
+            <p class="text-sm text-gray-400 mb-4">1927 – 2016</p>
+            <a href="minsky.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+
+        <!-- Allen Newell Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=Allen+Newell" alt="Image of Allen Newell">
+            <h2 class="text-2xl font-bold text-white">Allen Newell</h2>
+            <p class="text-sm text-gray-400 mb-4">1927 – 1992</p>
+            <a href="newell.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+
+        <!-- Geoffrey Hinton Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=Geoffrey+Hinton" alt="Image of Geoffrey Hinton">
+            <h2 class="text-2xl font-bold text-white">Geoffrey Hinton</h2>
+            <p class="text-sm text-gray-400 mb-4">1947 – Present</p>
+            <a href="hinton.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+
+        <!-- Fei-Fei Li Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=Fei-Fei+Li" alt="Image of Fei-Fei Li">
+            <h2 class="text-2xl font-bold text-white">Fei-Fei Li</h2>
+            <p class="text-sm text-gray-400 mb-4">1976 – Present</p>
+            <a href="li.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+
+        <!-- Ashish Vaswani Card -->
+        <div class="pioneer-card p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col items-center text-center">
+            <img class="rounded-full w-32 h-32 mb-4 border-4 border-indigo-500" src="https://placehold.co/128x128/333333/cccccc?text=Ashish+Vaswani" alt="Image of Ashish Vaswani">
+            <h2 class="text-2xl font-bold text-white">Ashish Vaswani</h2>
+            <p class="text-sm text-gray-400 mb-4">1980 – Present</p>
+            <a href="vaswani.html" class="pioneer-link-button text-white font-semibold py-2 px-6 rounded-full w-full">View Presentation</a>
+        </div>
+
+    </div>
+
 </body>
 </html>
