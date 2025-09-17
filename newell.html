@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allen Newell: An AI Pioneer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .presentation-container {
+            width: 100%;
+            height: 100%;
+            max-width: 960px;
+            max-height: 720px;
+            position: relative;
+            background-color: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 4rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+            transform: scale(0.95);
+            text-align: center;
+        }
+        .slide.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1);
+        }
+        .navigation-buttons {
+            position: absolute;
+            bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-btn {
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            color: white;
+            background-color: #4f46e5;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        .nav-btn:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+        .nav-btn:disabled {
+            background-color: #d1d5db;
+            cursor: not-allowed;
+        }
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+        }
+        .slide-content {
+            font-size: 1.125rem;
+            color: #374151;
+            max-width: 80%;
+            line-height: 1.6;
+        }
+        .resource-btn {
+            margin-top: 1.5rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #e5e7eb;
+            color: #1f2937;
+            font-weight: 600;
+            border-radius: 9999px;
+            transition: background-color 0.2s, transform 0.1s;
+            text-decoration: none;
+        }
+        .resource-btn:hover {
+            background-color: #d1d5db;
+            transform: translateY(-1px);
+        }
+        .image-container {
+            margin: 2rem 0;
+            max-width: 90%;
+            max-height: 250px;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center">
+
+    <div class="presentation-container">
+        
+        <!-- Slide 1: Title -->
+        <div id="slide-1" class="slide active">
+            <h1 class="slide-title">Allen Newell: A Pioneer of AI</h1>
+            <p class="slide-content">Exploring the life and legacy of a foundational figure in computer science and artificial intelligence.</p>
+        </div>
+
+        <!-- Slide 2: Early Life -->
+        <div id="slide-2" class="slide">
+            <h2 class="slide-title">Early Life & Career</h2>
+            <p class="slide-content">Born in San Francisco in 1927, Allen Newell served in the U.S. Navy before earning a physics degree from Stanford. His career took a decisive turn at the RAND Corporation, where he met and began his pivotal partnership with economist and cognitive psychologist Herbert A. Simon. Together, they embarked on a quest to model human thought processes using computers.</p>
+            <div class="image-container">
+                <img src="https://placehold.co/400x250/e0e0e0/505050?text=Allen+Newell+and+Herbert+A.+Simon" alt="Allen Newell and Herbert A. Simon">
+            </div>
+        </div>
+
+        <!-- Slide 3: The Logic Theorist & GPS -->
+        <div id="slide-3" class="slide">
+            <h2 class="slide-title">The First AI Programs</h2>
+            <p class="slide-content">Newell and Simon, along with J.C. Shaw, created the **Logic Theorist (LT)** in 1956, considered the first true AI program. It successfully proved theorems from *Principia Mathematica*. This work led to the **General Problem Solver (GPS)**, an ambitious program that mimicked human problem-solving by breaking down complex tasks into smaller subproblems using "means-ends analysis."</p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="resource-btn">Watch a video on symbolic AI</a>
+            <div class="image-container">
+                <img src="https://placehold.co/400x250/e0e0e0/505050?text=Logic+Theorist+flowchart" alt="An illustration of a Logic Theorist flowchart">
+            </div>
+        </div>
+
+        <!-- Slide 4: Foundational Theories -->
+        <div id="slide-4" class="slide">
+            <h2 class="slide-title">Core Theories</h2>
+            <p class="slide-content">Newell's work was grounded in fundamental theories. With his colleagues, he developed the **Information Processing Language (IPL)**, a foundational language for symbolic AI. He also co-authored the **Physical Symbol System Hypothesis**, which posits that any system capable of intelligent action must be able to manipulate symbols. This idea provided a theoretical basis for the entire field of symbolic AI.</p>
+            <div class="image-container">
+                 <img src="https://placehold.co/400x250/e0e0e0/505050?text=Symbol+system+diagram" alt="Diagram of the Physical Symbol System Hypothesis">
+            </div>
+        </div>
+        
+        <!-- Slide 5: Influence on Modern AI -->
+        <div id="slide-5" class="slide">
+            <h2 class="slide-title">Legacy in Modern AI</h2>
+            <p class="slide-content">While deep learning dominates today, Newell's influence is profound. His concept of **heuristic search** is foundational to modern algorithms in areas like game AI and optimization. His pursuit of a **unified theory of cognition** through architectures like **Soar** continues to inspire researchers aiming to create a comprehensive model of human and machine intelligence, bridging the gap between symbolic reasoning and modern connectionist approaches.</p>
+            <a href="https://www.google.com/search?q=Soar+cognitive+architecture+explained" target="_blank" class="resource-btn">Learn more about Soar</a>
+        </div>
+
+        <!-- Slide 6: Final Slide -->
+        <div id="slide-6" class="slide">
+            <h2 class="slide-title">Newell's Enduring Legacy</h2>
+            <p class="slide-content">Allen Newell’s work established the very first steps of artificial intelligence. His commitment to understanding the human mind through computation laid the foundation for the entire field and continues to shape the direction of research in cognitive science and AI today. He proved that computers could do more than just calculate—they could reason.</p>
+        </div>
+
+        <div class="navigation-buttons">
+            <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+            <button id="next-btn" class="nav-btn">Next</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            const showSlide = (index) => {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
+            };
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
