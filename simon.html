@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbert Simon: A Mind for AI</title>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .presentation-container {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            padding: 2.5rem;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0;
+        }
+
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .slide h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+            text-align: center;
+        }
+
+        .slide p {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+
+        .slide-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .slide-content {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        .slide-text {
+            flex: 1;
+        }
+
+        .slide-image {
+            flex-shrink: 0;
+            width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            object-fit: cover;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        @media (min-width: 768px) {
+            .slide-image {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .link-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            text-align: center;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .primary-btn {
+            background-color: #1e40af;
+            color: #ffffff;
+        }
+
+        .primary-btn:hover {
+            background-color: #1e3a8a;
+        }
+
+        .secondary-btn {
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+
+        .secondary-btn:hover {
+            background-color: #e5e7eb;
+        }
+
+        .link-btn {
+            background-color: #d1d5db;
+            color: #1f2937;
+        }
+
+        .link-btn:hover {
+            background-color: #9ca3af;
+        }
+
+        .nav-bar {
+            background-color: #4b5563;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+
+        .nav-bar .button {
+            background-color: #6b7280;
+            color: #ffffff;
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-bar .button.active {
+            background-color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+
+<div class="presentation-container">
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <button class="button nav-button active" onclick="showSlide('early-life')">Early Life</button>
+        <button class="button nav-button" onclick="showSlide('major-contributions')">Major Contributions</button>
+        <button class="button nav-button" onclick="showSlide('ai-contributions')">Contributions to AI</button>
+        <button class="button nav-button" onclick="showSlide('modern-ai')">Influence Today</button>
+    </div>
+
+    <!-- Slide 1: Early Life -->
+    <div id="early-life" class="slide active">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h2>Early Life and Academic Journey</h2>
+                <p>Born in Milwaukee, Wisconsin in 1916, Herbert A. Simon was a true polymath. He began his academic career at the University of Chicago, earning a degree in political science. However, his interests quickly broadened to encompass economics, mathematics, sociology, and psychology, foreshadowing his later groundbreaking interdisciplinary work.</p>
+                <p>Simon's unique intellectual curiosity led him to combine these fields. He believed that understanding human decision-making required a holistic approach, which laid the foundation for his most famous theories.</p>
+            </div>
+            <div class="slide-image-container flex-shrink-0 md:w-1/3">
+                <img src="https://placehold.co/300x300/4F46E5/ffffff?text=Herbert%20Simon" alt="A portrait of Herbert Simon, the polymath and Nobel laureate." class="slide-image">
+            </div>
+        </div>
+        <div class="link-buttons">
+            <a href="https://www.nobelprize.org/prizes/economic-sciences/1978/simon/biographical/" target="_blank" class="button link-btn">Read His Biography</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="button secondary-btn" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <!-- Slide 2: Major Contributions (outside of AI) -->
+    <div id="major-contributions" class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h2>Major Contributions to Economics and Psychology</h2>
+                <p>Herbert Simon's most famous concept outside of AI is **Bounded Rationality**, for which he won the Nobel Prize in Economics in 1978. He challenged the classical economic assumption that individuals are perfectly rational "economic agents" who always make optimal decisions.</p>
+                <p>Instead, Simon argued that human rationality is limited by available information, time, and cognitive capacity. Therefore, people make "satisficing" decisions—ones that are "good enough" rather than perfect. This theory fundamentally changed the fields of economics and behavioral science.</p>
+            </div>
+            <div class="slide-image-container flex-shrink-0 md:w-1/3">
+                <img src="https://placehold.co/300x300/F97316/ffffff?text=Bounded%20Rationality%20Diagram" alt="A conceptual diagram illustrating the theory of bounded rationality." class="slide-image">
+            </div>
+        </div>
+        <div class="link-buttons">
+            <a href="https://plato.stanford.edu/entries/bounded-rationality/" target="_blank" class="button link-btn">Learn More About Bounded Rationality</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="button secondary-btn" onclick="prevSlide()">Previous</button>
+            <button class="button secondary-btn" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <!-- Slide 3: Contributions to AI -->
+    <div id="ai-contributions" class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h2>Foundational Contributions to Artificial Intelligence</h2>
+                <p>Simon is considered one of the founding fathers of AI. In 1956, with Allen Newell and J.C. Shaw, he created the **Logic Theorist**, widely considered the first artificial intelligence program. It was designed to mimic human problem-solving by proving mathematical theorems.</p>
+                <p>Building on this, they developed the **General Problem Solver (GPS)**. GPS was a more general-purpose program that used "means-ends analysis" to solve a variety of symbolic problems. This work was pivotal, as it proved that human-like thinking processes, such as heuristics and problem-solving strategies, could be simulated by a machine.</p>
+            </div>
+            <div class="slide-image-container flex-shrink-0 md:w-1/3">
+                <img src="https://placehold.co/300x300/10B981/ffffff?text=Logic%20Theorist" alt="A representation of the Logic Theorist program solving a problem." class="slide-image">
+            </div>
+        </div>
+        <div class="link-buttons">
+            <a href="https://www.youtube.com/watch?v=p5c9ns0oeZg" target="_blank" class="button link-btn">Watch Simon Talk About Early AI</a>
+            <a href="https://en.wikipedia.org/wiki/General_Problem_Solver" target="_blank" class="button link-btn">Explore GPS on Wikipedia</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="button secondary-btn" onclick="prevSlide()">Previous</button>
+            <button class="button secondary-btn" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <!-- Slide 4: Influence on Modern AI -->
+    <div id="modern-ai" class="slide">
+        <div class="slide-content">
+            <div class="slide-text">
+                <h2>A Lasting Influence on Modern AI</h2>
+                <p>The core concepts introduced by Simon—namely, heuristics and symbolic reasoning—remain fundamental to AI today. His vision was that AI should simulate human cognitive processes, a field now known as cognitive science.</p>
+                <p>While modern AI often uses neural networks for machine learning, Simon's work on problem-solving, decision-making, and knowledge representation provides the theoretical bedrock for many of today's systems. His emphasis on understanding human cognition as a model for AI continues to inspire researchers.</p>
+            </div>
+            <div class="slide-image-container flex-shrink-0 md:w-1/3">
+                <img src="https://placehold.co/300x300/F59E0B/ffffff?text=Modern%20AI" alt="A conceptual image representing the link between past and modern AI." class="slide-image">
+            </div>
+        </div>
+        <div class="link-buttons">
+            <a href="https://simoninstitute.ch/blog/post/how-computers-will-continue-to-shape-the-world-herbert-a-simon-video-transcript" target="_blank" class="button link-btn">Simon's Talk on the Future of Computers</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="button secondary-btn" onclick="prevSlide()">Previous</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const navButtons = document.querySelectorAll('.nav-button');
+    let currentSlideIndex = 0;
+
+    function showSlide(slideId) {
+        // Hide all slides
+        slides.forEach(slide => slide.classList.remove('active'));
+
+        // Show the requested slide
+        const targetSlide = document.getElementById(slideId);
+        if (targetSlide) {
+            targetSlide.classList.add('active');
+            currentSlideIndex = Array.from(slides).indexOf(targetSlide);
+        }
+
+        // Update active class on nav buttons
+        navButtons.forEach(btn => btn.classList.remove('active'));
+        navButtons[currentSlideIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+        if (currentSlideIndex < slides.length - 1) {
+            currentSlideIndex++;
+            showSlide(slides[currentSlideIndex].id);
+        }
+    }
+
+    function prevSlide() {
+        if (currentSlideIndex > 0) {
+            currentSlideIndex--;
+            showSlide(slides[currentSlideIndex].id);
+        }
+    }
+</script>
+
+</body>
+</html>
