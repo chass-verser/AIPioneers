@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Boole: Pioneer of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            transition: background-color 0.5s ease;
+        }
+        .slide {
+            transform: translateX(100%);
+            opacity: 0;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        .slide.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-4xl bg-white shadow-xl rounded-2xl p-8 md:p-12 border border-gray-200">
+
+        <!-- Slide Container -->
+        <div class="relative overflow-hidden h-96">
+            <!-- Slide 1: Introduction -->
+            <div id="slide-1" class="absolute inset-0 flex flex-col items-center justify-center text-center p-4 slide active">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">George Boole: Pioneer of AI</h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-6">
+                    Exploring the life and legacy of the mathematician who laid the logical foundation for the digital age.
+                </p>
+                <div class="w-full max-w-sm rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://placehold.co/800x450/e5e7eb/6b7280?text=George+Boole" alt="An illustration of George Boole" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Slide 2: Early Life and Education -->
+            <div id="slide-2" class="absolute inset-0 flex flex-col p-4 slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Early Life and Education</h2>
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="flex-shrink-0 w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                        <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=Boole%27s+Hometown" alt="Image of a historic town in England, representing Boole's hometown." class="w-full h-auto object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2 text-gray-700">
+                        <p class="mb-4">
+                            Born in Lincoln, England, in 1815, George Boole was a largely self-taught genius. He received very little formal education and began working as a teacher at the young age of 16 to support his family.
+                        </p>
+                        <p class="mb-4">
+                            Despite this, he taught himself mathematics, Latin, and other subjects. His passion for learning and his original mathematical research led him to publish several papers, which earned him recognition and, in 1849, a professorship at Queen's College in Cork, Ireland.
+                        </p>
+                        <a href="https://www.ucc.ie/en/heritage/history/people/ucc-staff/professor-george-boole/" target="_blank" class="text-blue-600 hover:underline font-medium">Learn more about his life at UCC</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Major Contributions -->
+            <div id="slide-3" class="absolute inset-0 flex flex-col p-4 slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Major Contributions</h2>
+                <div class="flex flex-col-reverse md:flex-row items-center gap-6">
+                    <div class="w-full md:w-1/2 text-gray-700">
+                        <p class="mb-4">
+                            Boole's most significant contribution was the creation of **Boolean algebra**, a system that uses mathematical symbols to represent logical statements. In this system, variables can only be true (1) or false (0), and they are manipulated using logical operators like AND, OR, and NOT.
+                        </p>
+                        <p class="mb-4">
+                            He detailed these ideas in his two groundbreaking books, *The Mathematical Analysis of Logic* (1847) and *An Investigation into the Laws of Thought* (1854). This work transformed logic from a branch of philosophy into a branch of mathematics.
+                        </p>
+                        <a href="https://plato.stanford.edu/entries/boole/" target="_blank" class="text-blue-600 hover:underline font-medium">Read the Stanford Encyclopedia of Philosophy entry</a>
+                    </div>
+                    <div class="flex-shrink-0 w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                        <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=Boolean+Algebra" alt="Diagram of a simple Boolean logic gate." class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Contribution to AI -->
+            <div id="slide-4" class="absolute inset-0 flex flex-col p-4 slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">A Foundational Figure for AI</h2>
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="flex-shrink-0 w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                        <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=Symbolic+Logic" alt="A visual representation of symbolic logic." class="w-full h-auto object-cover">
+                    </div>
+                    <div class="w-full md:w-1/2 text-gray-700">
+                        <p class="mb-4">
+                            Boole's work is a foundational pillar of artificial intelligence. It provided one of the first methods for a machine to perform logical reasoning. By converting human thought and logical propositions into a mathematical and symbolic form, he paved the way for the development of algorithms that could process and make decisions based on logical rules.
+                        </p>
+                        <p class="mb-4">
+                            This concept of symbolic reasoning became a key component of early AI research, inspiring a new generation of scientists and engineers to explore how machines could "think."
+                        </p>
+                        <a href="https://www.youtube.com/watch?v=gSgT-bSj03c" target="_blank" class="text-blue-600 hover:underline font-medium">Watch a video on Boolean logic and AI</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Influence on Modern AI -->
+            <div id="slide-5" class="absolute inset-0 flex flex-col p-4 slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Influence on Modern AI</h2>
+                <div class="flex flex-col-reverse md:flex-row items-center gap-6">
+                    <div class="w-full md:w-1/2 text-gray-700">
+                        <p class="mb-4">
+                            Boole's algebra is the foundation of all modern digital computing. In the 1930s, Claude Shannon applied Boolean logic to electric relay circuits, showing that these circuits could be used to perform logical operations. This was a monumental leap that linked abstract logic to physical machines.
+                        </p>
+                        <p class="mb-4">
+                            Today, Boolean logic is everywhere. Search engines use it to refine queries (e.g., "AI AND robotics"), and it's essential for defining the deterministic rules and conditions in many AI systems, from home automation to complex security protocols. Every computer instruction, at its core, relies on the binary principles that Boole first formalized.
+                        </p>
+                        <a href="https://www.britannica.com/biography/George-Boole" target="_blank" class="text-blue-600 hover:underline font-medium">Read more about his lasting legacy</a>
+                    </div>
+                    <div class="flex-shrink-0 w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                        <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=Modern+Technology" alt="An abstract image of a digital circuit board." class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between mt-8">
+            <button id="prevBtn" class="bg-gray-200 text-gray-800 font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-gray-300 disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed">
+                Previous
+            </button>
+            <button id="nextBtn" class="bg-indigo-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-indigo-700">
+                Next
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === slides.length - 1;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        // Initialize the presentation
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
