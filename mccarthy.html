@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John McCarthy: The Father of AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .presentation-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #1E1E1E;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            padding: 2.5rem;
+            transition: all 0.5s ease-in-out;
+            border: 2px solid #333;
+        }
+
+        .slide {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 400px;
+        }
+        
+        .slide.active {
+            display: flex;
+        }
+
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #BB86FC;
+            margin-bottom: 1rem;
+        }
+        
+        .slide-subtitle {
+            font-size: 1.5rem;
+            color: #B0B0B0;
+            margin-bottom: 2rem;
+        }
+
+        .slide-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 2rem;
+        }
+        
+        .nav-button {
+            background-color: #03DAC6;
+            color: #121212;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(3, 218, 198, 0.4);
+        }
+
+        .external-link {
+            background-color: #333;
+            color: #E0E0E0;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease-in-out;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .external-link:hover {
+            background-color: #555;
+        }
+
+        .image-container {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            border: 2px solid #444;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+
+        <!-- Slide 1: Title Slide -->
+        <div id="slide1" class="slide active">
+            <h1 class="slide-title">John McCarthy: A Pioneer of AI</h1>
+            <p class="slide-subtitle">Exploring the Legacy of a Visionary</p>
+            <p class="slide-text">This presentation will guide you through the life and groundbreaking contributions of John McCarthy, widely known as the "Father of Artificial Intelligence."</p>
+            <button id="next-button-1" class="nav-button mt-auto">Start</button>
+        </div>
+
+        <!-- Slide 2: Early Life -->
+        <div id="slide2" class="slide">
+            <h2 class="slide-title">Early Life & Education</h2>
+            <div class="image-container">
+                <img src="https://placehold.co/300x200/222222/E0E0E0?text=John+McCarthy" alt="An image of a young John McCarthy.">
+            </div>
+            <p class="slide-text">Born in Boston in 1927, John McCarthy was a mathematical prodigy. He taught himself college-level mathematics while still in high school and was accepted into Caltech two years early. He later earned his Ph.D. in mathematics from Princeton University in 1951.</p>
+            <div class="nav-buttons">
+                <button id="prev-button-2" class="nav-button">Previous</button>
+                <button id="next-button-2" class="nav-button">Next</button>
+            </div>
+        </div>
+
+        <!-- Slide 3: Major Contributions -->
+        <div id="slide3" class="slide">
+            <h2 class="slide-title">Major Contributions</h2>
+            <div class="slide-text">
+                <p><b>Coining the Term "Artificial Intelligence"</b></p>
+                <p>In 1955, McCarthy proposed the term "artificial intelligence" for a workshop at Dartmouth College. This event officially launched the field as a distinct area of study.</p>
+                <a href="https://en.wikipedia.org/wiki/Dartmouth_Workshop" target="_blank" class="external-link">Learn More About the Dartmouth Workshop</a>
+
+                <p class="mt-4"><b>The LISP Programming Language</b></p>
+                <p>In 1958, he developed LISP (List Processing), a revolutionary programming language designed for symbolic computation. LISP became the go-to language for AI research for decades due to its unique ability to handle complex data structures and recursion.</p>
+                <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)" target="_blank" class="external-link">Explore the LISP Language</a>
+                
+                <p class="mt-4"><b>Pioneering Time-Sharing</b></p>
+                <p>McCarthy was also a key figure in popularizing time-sharing, a concept that allows multiple users to access and use a single computer simultaneously. This paved the way for modern cloud computing and interactive computing.</p>
+                <a href="https://www.youtube.com/watch?v=F1WfE4m70_Y" target="_blank" class="external-link">Watch a Video on Time-Sharing</a>
+            </div>
+            <div class="nav-buttons">
+                <button id="prev-button-3" class="nav-button">Previous</button>
+                <button id="next-button-3" class="nav-button">Next</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: Influence on Modern AI -->
+        <div id="slide4" class="slide">
+            <h2 class="slide-title">Influence on Modern AI</h2>
+            <p class="slide-text">
+                McCarthy's contributions created a ripple effect that is still felt today. His work on symbolic AI, while different from the deep learning models popular now, established the importance of logical reasoning and knowledge representation. Key concepts from LISP, such as garbage collection and dynamic data structures, are now standard features in many modern programming languages. The time-sharing systems he championed are the direct ancestors of today's cloud services, which power nearly all AI applications.
+            </p>
+            <div class="nav-buttons">
+                <button id="prev-button-4" class="nav-button">Previous</button>
+                <button id="next-button-4" class="nav-button">Next</button>
+            </div>
+        </div>
+        
+        <!-- Slide 5: Conclusion -->
+        <div id="slide5" class="slide">
+            <h2 class="slide-title">Thank You</h2>
+            <p class="slide-text">
+                John McCarthy's visionary ideas and foundational contributions continue to shape the field of artificial intelligence. He was a true pioneer whose work enabled generations of researchers to pursue the ambitious goal of creating intelligent machines.
+            </p>
+            <div class="image-container">
+                <img src="https://placehold.co/300x200/222222/E0E0E0?text=AI+Legacy" alt="An image representing the legacy of AI pioneers">
+            </div>
+            <p class="slide-text mt-4">
+                You can close this window now or use the button below to go back to the beginning.
+            </p>
+            <button id="restart-button" class="nav-button mt-auto">Restart Presentation</button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                if (index >= slides.length) {
+                    currentSlide = 0; // Loop back to start
+                } else if (index < 0) {
+                    currentSlide = slides.length - 1; // Go to last slide
+                } else {
+                    currentSlide = index;
+                }
+                
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === currentSlide) {
+                        slide.classList.add('active');
+                    }
+                });
+            }
+
+            document.getElementById('next-button-1').addEventListener('click', () => showSlide(1));
+            document.getElementById('next-button-2').addEventListener('click', () => showSlide(2));
+            document.getElementById('prev-button-2').addEventListener('click', () => showSlide(0));
+            document.getElementById('next-button-3').addEventListener('click', () => showSlide(3));
+            document.getElementById('prev-button-3').addEventListener('click', () => showSlide(1));
+            document.getElementById('next-button-4').addEventListener('click', () => showSlide(4));
+            document.getElementById('prev-button-4').addEventListener('click', () => showSlide(2));
+            document.getElementById('restart-button').addEventListener('click', () => showSlide(0));
+        });
+    </script>
+
+</body>
+</html>
