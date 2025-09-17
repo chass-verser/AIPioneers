@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Vaswani: A Pioneer of Modern AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        .presentation-container {
+            width: 100%;
+            max-width: 900px;
+            height: 90vh;
+            max-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .slide-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4b5563;
+        }
+        .slide-content {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            color: #374151;
+            max-width: 800px;
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .slide-image {
+            max-width: 80%;
+            height: auto;
+            border-radius: 1rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .nav-buttons {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: #4f46e5;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .nav-button:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+        .nav-button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .resource-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #4f46e5;
+            background-color: #eef2ff;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .resource-button:hover {
+            background-color: #e0e7ff;
+        }
+        .list-item {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presentation-container">
+        
+        <!-- Slide 1: Title -->
+        <div class="slide active" id="slide-1">
+            <h1 class="slide-title">Ashish Vaswani</h1>
+            <h2 class="slide-subtitle">A Pioneer of Modern AI</h2>
+            <p class="mt-8 text-lg text-gray-600">A research project by [Your Name]</p>
+        </div>
+
+        <!-- Slide 2: Early Life and Career -->
+        <div class="slide" id="slide-2">
+            <h2 class="slide-title">Early Life & Career</h2>
+            <div class="slide-content">
+                <p>Born in 1986, Ashish Vaswani grew up in Oman before moving to Nagpur, India. Fascinated by science and mathematics, he pursued a bachelor's degree in computer science at the Birla Institute of Technology.</p>
+                <br>
+                <p>His interest in algorithms led him to the University of Southern California (USC), where he earned his master's and Ph.D. in computer science. His work at USC focused on natural language processing, setting the stage for his most significant contributions.</p>
+                <br>
+                <p>After his studies, he joined the prestigious Google Brain team as a research scientist.</p>
+            </div>
+        </div>
+        
+        <!-- Slide 3: The Transformer Model -->
+        <div class="slide" id="slide-3">
+            <h2 class="slide-title">The Transformer Model</h2>
+            <div class="slide-content text-center">
+                <p>Vaswani is the co-inventor of the revolutionary <strong>Transformer</strong> deep learning architecture. Published in 2017, this model changed the game by moving away from traditional, sequential data processing.</p>
+                <br>
+                <p>Its key innovation is the <strong>self-attention mechanism</strong>, which allows the model to process all parts of an input sequence at once, weighing the importance of different words to understand context.</p>
+                <img src="https://placehold.co/600x350/a5b4fc/4338ca?text=Transformer+Model+Diagram" alt="A diagram illustrating the Transformer model's architecture" class="slide-image">
+            </div>
+        </div>
+
+        <!-- Slide 4: "Attention Is All You Need" -->
+        <div class="slide" id="slide-4">
+            <h2 class="slide-title">"Attention Is All You Need"</h2>
+            <div class="slide-content">
+                <p>This is the title of the landmark paper Vaswani co-authored in 2017. The paper not only introduced the Transformer but also demonstrated its superior performance in machine translation tasks, showing it was faster and more accurate than previous models.</p>
+                <br>
+                <p>The core concept of "attention" became a foundational principle in modern AI. This paper has been cited tens of thousands of times and is a cornerstone of deep learning research.</p>
+                <a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank" class="resource-button">Read the full paper</a>
+            </div>
+        </div>
+
+        <!-- Slide 5: Influence on Modern AI -->
+        <div class="slide" id="slide-5">
+            <h2 class="slide-title">Influence on Modern AI</h2>
+            <div class="slide-content">
+                <p>The Transformer model is the foundation for countless modern AI systems, including:</p>
+                <ul class="list-disc list-inside mt-4 ml-4">
+                    <li class="list-item"><strong>GPT Models:</strong> The Generative Pre-trained Transformers from OpenAI, which power applications like ChatGPT.</li>
+                    <li class="list-item"><strong>BERT:</strong> Google's Bidirectional Encoder Representations from Transformers, used for search and language understanding.</li>
+                    <li class="list-item"><strong>Modern Machine Translation:</strong> Services that provide real-time, high-quality language translation.</li>
+                </ul>
+                <a href="https://www.youtube.com/watch?v=Kz69kS4X-6E" target="_blank" class="resource-button">Watch a video on how Transformers work</a>
+            </div>
+        </div>
+
+        <!-- Slide 6: Conclusion -->
+        <div class="slide" id="slide-6">
+            <h2 class="slide-title">Conclusion & Legacy</h2>
+            <div class="slide-content text-center">
+                <p>Ashish Vaswani's work has had a monumental impact on the field of AI. By co-inventing the Transformer, he helped enable the widespread adoption of large language models and other powerful AI tools that are now integral to our daily lives.</p>
+                <p class="mt-4">He continues to push the boundaries of AI as the co-founder and CEO of Essential AI, a company focused on solving humanity's biggest challenges with powerful AI.</p>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button id="prevBtn" class="nav-button" disabled>Previous</button>
+            <button id="nextBtn" class="nav-button">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            updateButtons();
+        }
+
+        function updateButtons() {
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        // Initialize the first slide
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
